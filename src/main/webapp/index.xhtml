@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Controle de Pedidos</title>
+</h:head>
+<body>
+	<h1>Controle de Pedidos</h1>
+
+<!-- 	<form> -->
+<!-- 		<h:outputLabel value="Coloque um URL com json para gravar pedidos " /> -->
+<!-- 		<h:inputText /> -->
+<!-- 		<h:commandButton value="Gravar" /> -->
+<!-- 	</form> -->
+
+	<h:form id="test_form">
+		<h:outputLabel value="Coloque um json direto para gravar pedidos " />
+		<h:inputText id="arquivo_teste_json" value="#{pedidoBean.arquivoTesteJson}" />
+		
+		<h:inputText id="numero" value="#{pedidoBean.numero}" />
+		
+		<h:commandButton value="Gravar" id="gravarPedidosTeste" actionListener="#{pedidoBean.salvarPedidosTeste}"/>
+	</h:form>
+
+	<fieldset>
+		<legend>Informações sobre o pedido selecionado</legend>
+		<h:panelGrid columns="2">
+			<h:outputLabel value="Número de Controle: " />
+			<h:inputText disabled="true" />
+
+			<h:outputLabel value="Código do Cliente: " />
+			<h:inputText disabled="true" />
+
+			<h:outputLabel value="Nome do Produto: " />
+			<h:inputText disabled="true" />
+
+			<h:outputLabel value="Quantidade: " />
+			<h:inputText disabled="true" />
+
+			<h:outputLabel value="Valor Total: " />
+			<h:inputText disabled="true" />
+
+			<h:outputLabel value="Data de Cadastro: " />
+			<h:inputText disabled="true" />
+		</h:panelGrid>
+	</fieldset>
+</body>
+</html>
